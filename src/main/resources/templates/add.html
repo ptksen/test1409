@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Management</title>
+</head>
+<body>
+<h1>Bank Management</h1>
+<form th:action="@{/add-process}" th:object="${bank}" method="post">
+    <label>Bank name</label>
+    <input type="text" th:field="*{bankName}"/>
+    <label>Bank account</label>
+    <input type="text" th:field="*{bankAccount}"/>
+    <label>User name</label>
+    <input type="text" th:field="*{userName}"/>
+
+    <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
